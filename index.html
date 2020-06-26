@@ -18,9 +18,8 @@
             if(isNaN(e1)){
                 return 'UnSupport'
             }
-            // var f1 = parseFloat(e1)
-            const f1 = Math.abs(parseFloat(e1));
-            // sample
+            var f1 = parseFloat(e1)
+            // const f1 = Math.abs(parseFloat(e1));
             const f2 = parseFloat(e2);
             switch (op) {
                 case 'plus':
@@ -49,15 +48,15 @@
                 return Math.floor(value)
             }
             if(decimalPoint === 'round'){
-                return Math.round(value)
-                //return Math.floor(value)
+                // return Math.round(value)
+                return Math.floor(value)
             }
             return value
         }
         function disableSecond(){
             const op = document.getElementById('operator').value;
-            // if(op === 'sqrt' || op === 'square'){
-            if(op === 'square'){
+            if(op === 'sqrt' || op === 'square'){
+            // if(op === 'square'){
                 document.getElementById('second').disabled = true
             }
             else{
